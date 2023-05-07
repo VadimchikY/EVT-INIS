@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.image,.title{
+    margin: auto 50px;
+}
+.el1{
+    margin:15px 50px ;
+    font-size:30px;
+}
+.box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 50px;
+    flex-wrap: wrap;
+
+}
+.box{
+    border: solid 4px;
+    box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+    border-radius:20px;
+    overflow: hidden;
+    margin: 10px 10px;
+
+}
+.box h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: darkblue;
+}
+.box p{
+    padding: 0 10px 10px 10px;
+    color: darkgray;
+    font-weight: lighter;
+    font-size: smaller;
+}
+.box span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+.box button{
+    background-color: #173064;
+    color: white;
+    width: 80px;
+    height: 30px;
+    margin:0 0 10px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: darkblue;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+}
+footer a{
+
+    color: white;
+    margin: 150px 50px;
+    text-decoration: none;
+}
+
+.modal {
+    display: none; /* скрыть по умолчанию */
+    position: fixed; /* фиксированная позиция */
+    z-index: 1; /* сверху всех элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* добавить прокрутку, если содержимое больше окна */
+    background-color: rgba(0,0,0,0.8); /* затемнить фон */
+}
+
+/* Стили для контента модального окна */
+#modal-content {
+    background-color: wheat;
+    margin: 15% auto; /* 15% отступ сверху и снизу, и автоматический отступ слева и справа */
+    padding: 20px;
+    border: 5px solid #860;
+    height: 300px;
+    width: 380px;
+}
+
+/* Стили для кнопки закрытия */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
