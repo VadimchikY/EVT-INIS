@@ -1,0 +1,100 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: rgba(16, 233, 215, 0.178);
+  }
+
+
+.grid > :nth-child(1){
+  grid-area: el1;
+}
+.grid > :nth-child(2){
+  grid-area: el2;
+}
+.grid > :nth-child(3){
+  grid-area: el3;
+}
+.grid > :nth-child(4){
+  grid-area: el4;
+}
+.grid > :nth-child(5){
+  grid-area: el5;
+}
+.grid > :nth-child(6){
+  grid-area: el6;
+}
+.grid > :nth-child(7){
+  grid-area: el7;
+}
+.grid > :nth-child(8){
+  grid-area: el8;
+}
+.grid > :nth-child(9){
+  grid-area: el9;
+}
+.grid > :nth-child(10){
+  grid-area: el10;
+}
+
+@media (min-width: 1400px) {
+  .grid{
+    display: grid;
+    grid-template-areas:
+        'el1 el1 el2 el2'
+        'el3 el3 el3 el3'
+        'el4 el4 el5 el5'
+        'el6 el7 el8 el9'
+  ;
+  }
+}
+
+@media (max-width: 1399px) {
+  .grid{
+    display: grid;
+    grid-template-areas:
+        'el1 el1'
+        'el2 el2'
+        'el3 el3'
+        'el4 el5'
+        'el6 el7'
+        'el8 el9'
+  ;
+  }
+}
+
+@media (max-width: 899px) {
+  .grid{
+    display: grid;
+    grid-template-areas:
+        'el1'
+        'el2'
+        'el3'
+        'el4'
+        'el5'
+        'el6'
+        'el7'
+        'el8'
+        'el9'
+  ;
+  }
+}

@@ -1,0 +1,110 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+button {
+    margin: 50px;
+    font-size: 20px;
+    background-color: red;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(2px, -2px);
+    }
+    60% {
+        transform: translate(-2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+button {
+    animation: vibrate 0.8s linear infinite; /* linear - тип анимации, infinite - она будет бесконечно, 0.8 - длительность */
+}
+
+button:hover {
+    background-color: green;
+    animation-play-state: paused;
+}
+
+#container {
+    position: relative;
+    height: 650px;
+    background-color: blueviolet;
+}
+
+#ball {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 100%;
+
+    left: 50%;
+    position: absolute;
+
+    animation-name: fall1, goUp1, fall2, goUp2, fall3, goUp3, fall4;
+    animation-duration: 4s, 2s,1s,500ms,250ms,125ms,80ms;
+    animation-delay: 0s, 4s,6s,7s,7.5s,7.75s,7.875s,7.955s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.5,0,1,.4), cubic-bezier(0,.5,0,.4),
+                                cubic-bezier(.5,0,1,.4), cubic-bezier(0,.5,0,.4),
+                                cubic-bezier(.5,0,1,.4), cubic-bezier(0,.5,0,.4),
+                                cubic-bezier(.5,0,1,.4);
+
+}
+
+@keyframes fall1 {
+    0% {bottom: 600px}
+    100% {bottom: 0}
+}
+@keyframes goUp1 {
+    0% {bottom: 0}
+    100% {bottom: 300px}
+}
+@keyframes fall2 {
+    0% {bottom: 300px}
+    100% {bottom: 0}
+}
+@keyframes goUp2 {
+    0% {bottom: 0}
+    100% {bottom: 150px}
+}
+@keyframes fall3 {
+    0% {bottom: 150px}
+    100% {bottom: 0}
+}
+@keyframes goUp3 {
+    0% {bottom: 0}
+    100% {bottom: 75px}
+}
+@keyframes fall4 {
+    0% {bottom: 75px}
+    100% {bottom: 0}
+}
