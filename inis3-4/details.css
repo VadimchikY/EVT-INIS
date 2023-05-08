@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.image,.title{
+    margin: auto 50px;
+}
+
+.container,.side-buttons, .color-buttons {
+    display: flex;
+}
+
+.image {
+    flex: 0 0 auto; /* Фиксированная ширина картинки */
+}
+.card-name{
+    margin: 15px 50px;
+}
+.card-image {
+    max-width: 80%;
+    height: auto;
+}
+
+.card-price, .card-desc{
+    margin-bottom: 20px;
+}
+.side-buttons, .color-buttons{
+    align-items: center;
+    margin-bottom: 20px;
+}
+.side-buttons > *{
+    margin-right: 20px;
+}
+.color-buttons > *{
+    margin-right: 20px;
+}
+button{
+    height: 40px;
+    width: 80px;
+    border-radius: 12px;
+    border: 3.5px solid;
+}
+.info {
+    flex: 1 1 auto;
+}
+
+
+
+
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: darkblue;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+}
+footer a{
+
+    color: white;
+    margin: 150px 50px;
+    text-decoration: none;
+}

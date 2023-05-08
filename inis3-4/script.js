@@ -27,39 +27,45 @@ db.forEach((product, iter) => {
     productPrice.textContent = `${product.price}`;
     productCard.appendChild(productPrice);
 
+    const divForButtons = document.createElement("div");
+    divForButtons.className='buttons-card';
+    divForButtons.setAttribute('data-id', iter.toString());
 
     const productButton1 = document.createElement("button");
-    productButton1.className='quick-view-button'
+    productButton1.className='quick-view-button';
     productButton1.textContent = "Quick View";
-    productButton1.setAttribute('data-id', iter.toString())
-    productCard.appendChild(productButton1);
+    divForButtons.appendChild(productButton1);
 
     const productButton2 = document.createElement("button");
+    productButton2.className='see-page-button';
     productButton2.textContent = "See Page";
-    productButton2.setAttribute('data-id', iter.toString())
-    productCard.appendChild(productButton2);
+    divForButtons.appendChild(productButton2);
 
+    productCard.appendChild(divForButtons);
     // Добавляем карточку товара на страницу
     productContainer.appendChild(productCard);
 });
 
 
 // Получить модальное окно и кнопку закрытия
-const buttons = document.querySelectorAll('.quick-view-button');
+const divsForButtons = document.querySelectorAll('.buttons-card');
 
 // Получаем модальное окно
 const modal = document.querySelector('#quick-view-modal');
 
-for(let button of buttons){           // ф-ция отображения модального окна
+for(let divForButton of divsForButtons){           // ф-ция отображения модального окна
+    const quick_view_button = divForButton.querySelector('.quick-view-button')
+    const see_page_button = divForButton.querySelector('.see-page-button')
 
-    button.addEventListener('click', function(event)
+    const card_id = divForButton.getAttribute('data-id');
+    const object = db[card_id];
+
+    quick_view_button.addEventListener('click', function(event)
     {
         modal.style.display = "block";
-        const button_id = +event.target.getAttribute('data-id')
-        const object = db[button_id];
 
         const modalWindow = document.createElement("div");
-        modalWindow.id="modal-content"
+        modalWindow.id="modal-content";
         const image1 = document.createElement("img");
         image1.src = object.colors.white.front;
         image1.alt = object.name;
@@ -90,6 +96,11 @@ for(let button of buttons){           // ф-ция отображения мод
         document.getElementById('modal-content').replaceWith(modalWindow);
 
     })
+    see_page_button.addEventListener('click', function (event){
+        localStorage.setItem('card', JSON.stringify(object));
+        window.location.href = "details.html";
+    })
+
 }
 
 
