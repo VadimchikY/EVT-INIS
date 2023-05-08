@@ -49,12 +49,7 @@ article {
 .grid > :nth-child(8){
     grid-area: el8;
 }
-.grid > :nth-child(9){
-    grid-area: el9;
-}
-.grid > :nth-child(10){
-    grid-area: el10;
-}
+
 .grid{
     display: grid;
     grid-template-areas:
