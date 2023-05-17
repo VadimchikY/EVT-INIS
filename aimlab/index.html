@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>aimlab</title>
+    <style>
+        html{
+          height: 100%;
+            margin: 0;
+        }
+        .info-container, .button-container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .info-container > h1{
+            margin-right: 20px;
+        }
+        .game-area{
+            width: 80vw;
+            height: 80vh;
+            position: relative;
+            background-color: rgb(226, 226, 226);
+            overflow: hidden;
+            margin-left:10vw ;
+        }
+        .target {
+            position: absolute;
+            border: 1px solid black;
+            background-color: red;
+            box-sizing: border-box;
+            width: 75px;
+            height: 75px;
+            display: none;
+        }
+        .button-container > button{
+            width: 150px;
+            height: 40px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="info-container">
+    <h1>Time:</h1>
+    <h1 class="timer">0</h1>
+</div>
+<div class="game-area">
+    <div class="target"></div>
+</div>
+<div class="button-container">
+    <button >Start!</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
